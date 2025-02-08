@@ -1,0 +1,37 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+/* Body */
+
+body {
+    background: #222;
+    color: #d2d2d2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+i {
+    color: #d2d2d2;
+    font-size: 50px;
+}
+
+nav ul {
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    z-index: 2;
+    background-color: antiquewhite;
+}
+
