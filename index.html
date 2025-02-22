@@ -1,47 +1,175 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Gabriel F. Lima | Portifólio</title>
+    <title>Gustavo Feriani | Portfólio</title>
 
-    <!-- BooStrap Icons -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- BootStrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
-
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 
 <body>
-
+    
+    <!-- MENU -->
     <header id="header">
-        <nav class="menu">
-            <div>
-                <ul>
-                    <li> Home </li>
-                    <li> Projetos </li>
-                    <li> Sobre </li>
-                    <li> Contato </li>
-                </ul>
-            </div>
-        </nav>
-        </heder>
+        <!-- menu desktop -->
+        <nav class="header-nav">
+            <ul class="menu menu-principal"> <!-- lista nao ordenada -->
+                <li class="menu-item">
+                    <a href="#home" class="menu-link active">
+                        <span class="menu-texto"> home </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#projetos" class="menu-link">
+                        <span class="menu-texto"> Projetos </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#sobre" class="menu-link">
+                        <span class="menu-texto"> Sobre </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contato" class="menu-link">
+                        <span class="menu-texto"> Contato </span>
+                    </a>
+                </li>
+            </ul>
+        </nav> <!-- Fim menu desktop -->
 
-        <!-- Logo -->
-        <div>
-            <a href="https://www.google.com/">
-                <i class="bi bi-house"></i>                
+        <!-- logo -->
+        <div class="header-logo">
+            <a href="#">
+
+                <img src="img/GFL-branco.png" alt="logo com as iniciais GFL" class="logo">
             </a>
         </div>
 
-        <!-- Trocar cor do tema -->
+        <!-- trocar cor tema -->
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
 
+    </header>
+    <!-- FIM MENU DESKTOP -->
 
+    <!-- Menu Mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+            <li class="menu-item">
+                <a href="#home" class="menu-link active">
+                    <i class="menu-icone bi bi-house-door"></i>
+                    <span class="menu-texto">
+                        Home
+                    </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#projetos" class="menu-link">
+                    <i class="menu-icone bi bi-images"></i>
+                    <span class="menu-texto">
+                        Projetos
+                    </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#sobre" class="menu-link">
+                    <i class="menu-icone bi bi-person-fill"></i>
+                    <span class="menu-texto">
+                        Sobre
+                    </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#contato" class="menu-link">
+                    <i class="menu-icone bi bi-envelope-fill"> </i>
+                    <span class="menu-texto">
+                        Contato
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Fim Menu Mobile -->
+
+    <main id="home">
+        <div class="main-content">
+
+            <h1>
+                <b>Soluções Digitais & Desenvolvimento Web</b>
+                
+                <br>
+
+                <p>Gabriel F. Lima - Osasco, São Paulo</p>
+                
+            </h1> <!-- slogan -->
+            
+            <h2>
+                Analista de Sistemas, Desenvolvedor de Software e Gestor de Projetos Ágeis e Produtos Digitais.
+            </h2>
+            
+            <!-- Redes Sociais -->
+            <ul class="menu menu-social">
+                
+                <li>
+                    <a href="https://github.com/imgabriellima1" class="" target="_blank">
+                        <i class="menu-icone bi bi-github"> </i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/im.gabriellima/" class="" target="_blank">
+                        <i class="menu-icone bi bi-instagram"> </i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/gabriel-freitas-de-lima/" class="" target="_blank">
+                        <i class="menu-icone bi bi-linkedin"> </i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.behance.net/gabriellima101" class="" target="_blank">
+                        <i class="menu-icone bi bi-behance"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- botao externo -->
+            <a href="#projetos">
+                <button class="btn btn-primary">
+                   <span> Ver Projetos </span>
+                   <i class="bi bi-arrow-down-right"> </i>
+                </button>
+            </a>
+
+        </div>  <!-- main-content -->
+
+
+        <div class="video">
+
+            <iframe src="https://www.youtube.com/embed/61JHONRXhjs" title="Google — Year in Search 2024" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+
+
+    </main>
+
+    <script src="js/script.js"> </script>
+    
 </body>
 
 </html>
