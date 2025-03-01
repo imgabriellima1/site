@@ -1,61 +1,64 @@
 /* Google Fonts */
-
-/* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Monomakh&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shafarik&display=swap');
 
-/* Motserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Playfair Display */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Fim Google Fonts */
-
-
-/* :root{
-    --titulo:"Montserrat", serif;
-    --subtitulo: "Poppins", serif;
-    --paragrafo: 
-} */
 
 /* Definir cores tema Dark */
+
+/* Fonts */
+/* :root{
+    --titulo: "Atkinson Hyperlegible Next", serif;
+    --subtitulo: ;
+    --h1: "Monomakh", serif;
+    --paragrafos: ;
+}
+    */  
+
 :root,
 :root[data-theme="dark"] {
 
     --bg-body: #222;
-    --secundary-bg-body: #5e5e5e;
-    --cor-texto: #eeeeee;
+    --cor-texto: #eee;
 
     --bg-header: #222;
     --icone-tema: #eeeeee;
 
     --cor-borda: #eee;
+
     --cor-txt-menu: #eee;
-    --text-menu-hover: #eee;
+    --txt-menu-hover: #eee;
+
+    --texto-opaco: #b3b3b3;
 
     --btn: #eee;
+    --hover: #b5b5b5 ; 
 }
-
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
 
     --bg-body: #dfdfdf;
-    --secundary-bg-body: #afafaf;
     --cor-texto: #222;
 
     --bg-header: #dfdfdf;
     --icone-tema: #222;
 
     --cor-borda: #222;
-    
+
     --cor-txt-menu: #222;
     --txt-menu-hover: #222;
 
+    --texto-opaco: #b3b3b3;
+
     --btn: #222;
+    --hover: #747474;
+}
+
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html[data-theme='light'] .logo {
@@ -66,59 +69,31 @@ html {
     scroll-behavior: smooth;
 }
 
-/* reset css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: var(--bg-body); /* cor fundo */
     color: var(--cor-texto);  /* cor texto */
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: 600;
-    font-family: "Montserrat", serif;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Atkinson Hyperlegible Next", serif;
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-family: "Poppins", serif;
-    font-size: 40px;
-    font-weight: 300;
-    font-style: normal;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Roboto", serif;
+    text-align: center;
 }
 
-h3 {
-    font-family: "Poppins", serif;
-    font-size: 25px;
-    font-weight: 300;
-
-}
-
-h4 {
-    font-family: "Poppins", serif;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-p, span, li {
-    font-family: "Poppins", serif;
-    font-size: 14px;
-    text-align: justify;
-}
-
-.nome-cidade {
-    font-family: "Poppins", serif;
-    font-size: 40px;
-    font-weight: 300;
-    font-style: normal;
+b {
+    font-weight: 800;
 }
 
 i {
-    color:var(--cor-texto);
+    color: var(--icone-tema);
     font-size: 20px; /* tamanho do texto */
 }
 
@@ -133,16 +108,14 @@ i {
     z-index: 2;
 }
 
-.header-logo .logo{
-    width: auto;
-    height: 1.5rem;
+.header-logo .logo {
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .menu { 
-    font-family: "Poppins", serif;
     display: flex;
     align-items: center;
-    background: var(--bg-body); /* cor fundo */
     gap: 25px;
     list-style: none;
 }
@@ -152,7 +125,7 @@ i {
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid #f3f3f3;
+    border-top: 1px solid var(--cor-borda);
 }
 
 .menu-item {
@@ -161,13 +134,11 @@ i {
 
 .menu-link { 
     display: flex;
-    align-items: center;
     text-decoration: none;
-    align-items: center;
 }
 
 .menu-texto {
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -181,14 +152,14 @@ i {
 .menu-link.active .menu-texto,
 .menu-link:hover .menu-icone,
 .menu-link:hover .menu-texto{
-    color: var(--cor-texto);
+    color: var(--txt-menu-hover);
     font-weight: 800;
 }
 
 /* não selecionados */
 .menu-icone,
 .menu-texto{ 
-    color: var(--cor-texto);
+    color: var(--texto-opaco);
     font-weight: 400;
 }
 
@@ -230,7 +201,6 @@ i {
     gap: 25px;
 }
 
-
 /* btn */
 .btn {
     display: flex;
@@ -241,9 +211,8 @@ i {
     width: 100%;
     border-radius: 10px;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 10px;
     cursor: pointer;
-    color: var(--btn);
 }
 
 .btn-primary {
@@ -252,44 +221,47 @@ i {
 
 .btn span {
     color: var(--btn);
-    font-size: 18px;
-}
+    font-size: 16px;
+    text-transform: uppercase;
+}   
 
 .btn i {
-    font-size: 20px;
-    color: var(--cor-texto);
+    font-size: 14px;
 }
 
-.btn:hover {
-    transform: scale(1.03);
+.btn:hover{
+    transform: scale(1.01);
+    transition: ease-in-out .4s;
 }
 
-.btn span:hover{
-    color: #026386;
+.btn:hover span {
+    color: var(--hover);
 }
 
 a {
     text-decoration: none;
 }
 
-.video iframe{
+.video iframe {
     width: 100%;
     aspect-ratio: 16/9;
 }
 
 /* ATUALIZAÇOES FUTURAS */
-#home, .projetos, .sobre, .contato {
-    padding: 80px 16px;
+#home, 
+.projetos, 
+.sobre, 
+.contato {
+    padding: 32px 16px;
 }
 
-/* Projetos */
 
+/* Projetos */
 .projetos {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-
 
 .projeto-container {
     display: flex;
@@ -297,19 +269,16 @@ a {
     gap: 50px;
 }
 
-
 .projeto-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 32px;
 }
-
 
 .card-img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 3px 5px 15px var(--cor-texto);
+    box-shadow: 2px 5px 10px rgb(234, 234, 234);
     object-fit: cover;
     object-position: center;
     pointer-events: none;
@@ -318,41 +287,41 @@ a {
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 25px;
 }
 
-.card-title {
-    font-family: "Montserrat", serif;
+.card-title { 
+    font-family: "Roboto", serif;
     font-size: 25px;
-
+    font-weight: 600;
 }
 
 .card-description {
-    font-family: "Poppins", serif;
-    font-size: 18px;
+    font-family: "Roboto", serif;
+    font-size: 20px;
     font-weight: lighter;
-
 }
 
-.card-list {
+.card-lista {  
+    /* UL */
     list-style: none;
 }
 
-.card-item {
-    margin-bottom: 10px;
-    font-family: "Poppins", serif;
-    font-size: 15px;
-}
-
 .icone-seta {
-    color: var(--cor-texto);
-    font-size: 15px;
+    color: cyan;
+    font-size: 14px;
 }
 
-/* Sobre */
+.card-item {  
+    /* Li */
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
 
+/* sobre */
 .sobre {
     display: flex;
     flex-direction: column;
@@ -366,12 +335,9 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 32px;
-    margin-bottom: 80px;
 }
 
-
-
-.sobre-profile {
+.sobre-perfil {
     width: 100%;
     pointer-events: none;
     border-radius: 50%;
@@ -385,9 +351,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-
 }
-
 
 .sobre-skills,
 .sobre-icones {
@@ -399,27 +363,25 @@ a {
 .sobre-skills i,
 .sobre-icones i {
     font-size: 20px;
-    color: rgb(0, 189, 189);
+    color: rgb(4, 155, 220);
 }
-
 
 .sobre-content2 .col1,
 .sobre-content2 .col2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
-    gap: 32;
+    gap: 32px;
 }
 
-.sobre-content2 .col1 .row1,
+.sobre-content2 .col1 .row1, 
 .sobre-content2 .col1 .row2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
-/* Accordion */
+/* Accordions */
 
 .accordion-header {
     width: 100%;
@@ -427,81 +389,20 @@ a {
     padding: 8px 16px;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var();
+    border: 1px solid var(--cor-borda);
     background: transparent;
     text-align: left;
     cursor: pointer;
-    transition: ease-out .3s;
-    border: 1px solid var(--cor-borda);
-    color: var(--cor-texto);
-    text-transform: uppercase;
-}
-
-.accordion-header span {
-    color: var(--cor-texto);
-}
-
-.accordion-body {
-    display: none;
-    padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    border: 1px solid var(--cor-borda);
-
-}
-
-.accordion-item.active .accordion-header {
-    background-color: var(--secundary-bg-body);
-}
-
-.accordion-item.active .accordion-body {
-    display: flex;
-
+    transition: ease-in-out .3s;
 }
 
 
-
-.accordion-item.active .bi-caret-down-fill {
-    transform: rotate(180deg);
-}
-
-.accordion-header.end,
-.accordion-item.active .accordion-body.end {
-    border-radius: 0 0px 5px 5px;
-}
-
-.accordion-header.start {
-    border-radius: 5px 5px 0 0;
-}
-
-
-/* 992px */
-
-@media(min-width: 992px) {
-    .projeto-card {
-        flex-direction: row-reverse;
-        flex-direction: row;
-    }
-
-    .card-img {
-        width: 45%;
-    }
-
-    .sobre-content1,
-    .sobre-content2 {
-        display: grid;
-        grid-template-columns: 30% 60%;
-        justify-content: flex-start;
-        gap: 64px;
-    }
-}
 
 /* CSS Responsivo */
 @media (min-width: 768px) {  /* a partir de: 768px */
     #header {
         position: fixed;
-        border-bottom: 1px solid #f3f3f3;
+        border-bottom: 1px solid var(--cor-borda);
         padding: 16px 80px;
         background: var(--bg-header);
     }
@@ -519,11 +420,33 @@ a {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    h1 {
-        font-size: 40px;
-    }
 }
+
+/* 992px */
+@media (min-width: 992px) {
+    
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    
+    .card-img {
+        width: 55%;
+    }
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 32% 60%;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+}
+
 
 /* 1200px */
 @media (min-width: 1200px) {
@@ -534,7 +457,10 @@ a {
     .descricao-button .btn {
         width: auto;
     }
+
 }
+
+
 @media (min-width: 1400px) {
     /* #header {
         padding: 192px 240px 64px;
