@@ -104,6 +104,12 @@ h4 {
     font-weight: 300;
 }
 
+a,span,li {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-family: "Poppins", serif;
+}
+
 p, span, li {
     font-family: "Poppins", serif;
     font-size: 14px;
@@ -475,6 +481,52 @@ a {
     border-radius: 5px 5px 0 0;
 }
 
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+
+
+.contato p {
+    text-align: center;
+    width: 70%;
+}
+
+.contato .menu-link span {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer p{
+    text-align: center;
+    font-size: 12px;
+    padding: 16px;
+}
+
+footer a {
+    color: var(--cor-txt-menu)
+}
+
+footer i:hover {
+    color: rgb(5, 218, 5);
+}
+
+footer a:hover {
+    color: rgb(5, 218, 5);
+}
+
+
+
 
 /* 992px */
 
@@ -496,6 +548,8 @@ a {
         gap: 64px;
     }
 }
+
+
 
 /* CSS Responsivo */
 @media (min-width: 768px) {  /* a partir de: 768px */
@@ -520,8 +574,16 @@ a {
         align-items: flex-start;
     }
 
+    .contato {
+        padding: 90px;
+    }
+
     h1 {
         font-size: 40px;
+    }
+
+    footer {
+        margin-bottom: 60px;
     }
 }
 
