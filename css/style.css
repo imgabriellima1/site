@@ -501,7 +501,40 @@ a {
 .contato .menu-link span {
     text-decoration: none;
     color: var(--cor-texto);
+    padding: 8px;
 }
+
+/* Forms */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(125, 125, 125, 0.605);
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.6);
+}
+
+.form-contato label {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #131313;
+    font-family: 16px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 6px;
+
+}
+
 
 footer {
     margin-top: 20px;
@@ -551,6 +584,84 @@ footer a:hover {
 
 
 
+/* Carousel */
+
+#titulo-galeria {
+    margin-top: 50px;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 70vw; /* viewport width */
+    height: 70vh; /* viewport height */
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+
+}
+
+.slide img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Oculta os radios Buttons */
+
+.carousel input {
+    display: none;
+}
+
+/* Mudar os slides com os Radios Buttons */
+
+#slide1:checked ~ .slides {transform: translateX(0);}
+#slide2:checked ~ .slides {transform: translateX(-33.33%);}
+#slide3:checked ~ .slides {transform: translateX(-66.66%);}
+
+/* Botão de Navegação */
+
+.navigation {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: var(--btn);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.navigation label:hover,
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background: orange;
+    opacity: 1;
+}
+
+
+
 /* CSS Responsivo */
 @media (min-width: 768px) {  /* a partir de: 768px */
     #header {
@@ -565,6 +676,14 @@ footer a:hover {
     .header-nav {
         display: flex;
     }
+
+/* 
+    .header-nav,
+    .header-toggle {
+        min-width: 0%;
+    } */
+
+
     #home {
         padding: 128px 96px 64px 96px; /* VOLTAR AQUI */
     }

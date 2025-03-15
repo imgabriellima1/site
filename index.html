@@ -252,6 +252,44 @@
     </section>
     <!-- Fim Projetos -->
 
+
+    <!-- Galeria - Carousel -->
+    <h2 id="titulo-galeria"> Galeria </h2>
+
+    <div class="carousel">
+
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="img/Slide1.webp" alt="Imagem 1">
+            </div>
+            
+            <div class="slide">
+                <img src="img/Slide2.webp" alt="Imagem 2">
+            </div>
+
+            <div class="slide">
+                <img src="img/Slide3.webp" alt="Imagem 3">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+
+    </div>
+
+
+
+
+
+
     <!-- Sobre -->
     <section id="sobre" class="sobre">
 
@@ -441,6 +479,32 @@
                 <span class="email">gabrielfreitasdelima@gmail.com</span>
             </button>
         </a>
+
+
+        <!-- Forms -->
+        <p>
+            Entre em contato preenchendo o formulário abaixo.
+        </p>
+
+        
+        <form action="https://formspree.io/f/mgvavogv" class="form-contato" method="post"> <!-- formspreed -->
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite o seu e-mail">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="60" rows="7" placeholder="Digite aqui sua mensagem :)"></textarea>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+        </form>
+
+
+        
 
     </section>
 
